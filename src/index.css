@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.addAnimation{
+    animation: addAnimation 0.5s both ;
+}
+
+@keyframes  addAnimation{
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: white;
+    border-radius: 5px;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.shadow-inner {  box-shadow: inset rgba(40, 2, 252, 0.977) 0px 0px 15px 0px, inset rgba(26, 5, 255, 0.664) 0px 0px 12px 0px, inset rgb(244, 164, 5) 0px 0px 16px -24px; }
