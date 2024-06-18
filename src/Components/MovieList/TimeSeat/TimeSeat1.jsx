@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { saveData } from "../../../features/LoginPage/LoginPageSlice";
-import SeatSilver from "../Seats/Seat.jsx";
+import SeatTimeSlice1 from "../Seats/SeatTimeSlice1.jsx";
 
 
 export default function TimeSeat1() {
@@ -30,13 +30,13 @@ export default function TimeSeat1() {
   return (
     <section className="mt-10 mb-14">
       <div className="w-[430px] ">
-        <SeatSilver
+        <SeatTimeSlice1
           category="Sliver"
           amount={addSilver.price}
           seat={addSilver.seat}
         />
         <hr className="border border-gray-400 w-[450px]" />
-        <SeatSilver
+        <SeatTimeSlice1
           category="Gold"
           amount={addGold.price}
           seat={addGold.seat}
@@ -44,7 +44,7 @@ export default function TimeSeat1() {
         <hr className="border border-gray-400 w-[450px]" />
         <div className="">
           <h1 className="text-center font-bold text-lg"></h1>
-          <SeatSilver
+          <SeatTimeSlice1
             category="Platinum"
             amount={addPlatinum.price}
             seat={addPlatinum.seat}
