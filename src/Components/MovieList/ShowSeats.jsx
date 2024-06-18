@@ -9,7 +9,7 @@ import TimeSeat3 from "./TimeSeat/TimeSeat3.jsx";
 
 export default function ShowSeats() {
   const { moviename, name } = useParams();
-  const movieList = useSelector((state) => state.user.AddMovieList);
+  const movieList = useSelector((state) => state.MovieSlice.AddMovieList);
   const [Time, setTime] = useState('');
 
   function handleTimeChange(e) {

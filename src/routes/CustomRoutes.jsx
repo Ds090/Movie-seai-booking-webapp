@@ -8,6 +8,7 @@ import AddUserAdmin from "../Components/AdminPage/AddUserAdmin";
 import AddMovieAdmin from "../Components/AdminPage/AddMovieAdmin";
 import ShowSeats from "../Components/MovieList/ShowSeats";
 import ConfirmSeat from "../Components/ConfirmSeat/ConfirmSeat";
+import EditMovie from "../AddMovie/EditMovie";
 
 function CustomRoutes() {
     return(
@@ -19,6 +20,7 @@ function CustomRoutes() {
             <Route path="/adminpage/:id" element={<AdminPage/>}/> 
             <Route path="/adminpage/:id/adduseradmin" element={<AddUserAdmin/>} />
             <Route path="/adminpage/:id/addmovieadmin" element={<AddMovieAdmin />} />
+            <Route path="/adminpage/:id/addmovieadmin/:movieid" element={<EditMovie/>} />
         </Routes>
     );
 }

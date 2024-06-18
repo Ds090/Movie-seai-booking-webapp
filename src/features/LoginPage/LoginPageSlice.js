@@ -2,8 +2,6 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 import { Admin } from "../../Admin/CustomAdmin";
 
-let objGetData = JSON.parse(localStorage.getItem("AddMovieData")) || [];
-
 let getUserData = JSON.parse(localStorage.getItem("userData")) || [];
 
 function loadStateData() {
@@ -28,7 +26,6 @@ function StoreData(state) {
 }
 const initialState = loadStateData() || {
   user: getUserData,
-  AddMovieList: objGetData,
   Sliver: {
     seat: Array.from({length: 77}, (_, i) => ({
       id: i + 1,
@@ -113,31 +110,6 @@ export const userSlice = createSlice({
       }
     },
 
-    addMovieList: (state, action) => {
-      const movieName = action.payload.movieName;
-      const movieDate = action.payload.movieDate;
-      const movieImg = action.payload.movieImg;
-      const addMovie = {
-        id: nanoid(),
-        movieName: movieName,
-        movieDate: movieDate,
-        movieImg: movieImg,
-      };
-      state.AddMovieList.push(addMovie);
-      localStorage.setItem("AddMovieData", JSON.stringify(state.AddMovieList));
-    },
-
-    removeMovie: (state, action) => {
-      let updateList = state.AddMovieList.filter(
-        (movie) => movie.id !== action.payload
-      );
-
-      localStorage.setItem("AddMovieData", JSON.stringify(updateList)) || [];
-      return {
-        AddMovieList: updateList,
-      };
-    },
-
     removeUser: (state, action) => {
       let updateUser = state.user.filter((user) => user.id !== action.payload);
 
@@ -200,13 +172,11 @@ export const userSlice = createSlice({
 
 export const {
   addUserData,
-  addMovieList,
-  removeMovie,
   removeUser,
   navigationPage,
   addSeat,
   bookedSeat,
-  saveData
+  saveData,
 } = userSlice.actions;
 
 export default userSlice.reducer;

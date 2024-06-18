@@ -2,9 +2,9 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { GrClose } from "react-icons/gr";
-import { addMovieList } from "../features/LoginPage/LoginPageSlice";
 import { MdMovie } from "react-icons/md";
 import { useDispatch } from "react-redux";
+import { addMovieList } from "../features/LoginPage/MovieSlice";
 export default function AddMovie({cleanpop}){
   const [date, setDate] = useState([]);
   const [MovieNme, setMovieName] = useState("");

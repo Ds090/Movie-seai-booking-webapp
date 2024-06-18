@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import { Link, useParams } from "react-router-dom";
 
 export default function MovieList() {
-    const movieData = useSelector(state  => state.user.AddMovieList);
+    const movieData = useSelector(state  => state.MovieSlice.AddMovieList);
     const {id, name} = useParams();
     return (
         <section className="w-full h-full flex flex-wrap justify-evenly items-center mt-8">
