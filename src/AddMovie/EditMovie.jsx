@@ -10,7 +10,7 @@ export default function EditMovie() {
   const MovieList = useSelector((state) => state.MovieSlice.AddMovieList);
   const existingMovie = MovieList.find(movie => movie.id == movieid);
 
-  // Initialize state variables
+  
   const [date, setDate] = useState('');
   const [MovieNme, setMovieName] = useState(existingMovie ? existingMovie.movieName : '');
   const [MovieImg, setMovieImg] = useState(existingMovie ? existingMovie.movieImg : '');

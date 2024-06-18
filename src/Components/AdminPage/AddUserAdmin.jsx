@@ -22,13 +22,13 @@ export default function AddUserAdmin() {
         <NavBar UserName={Admin.userName}/>
         <section className="w-full flex justify-center items-center">
           <table className="mt-9 w-[90%] rounded-md">
-            <thead className="bg-black text-white h-[50px] rounded-md">
+            <thead className="bg-[#1a1a1a] text-white h-[50px]">
               <tr className="">
                 <th className="">USER NAME</th>
                 <th className="">PASSWORD</th>
                 {/* <th className="border border-[#dddddd]">TIME</th> */}
                 <th className="">
-                  <button className="bg-stone-900 hover:bg-stone-800 py-1 px-2 rounded text-white text-[14px]" onClick={handlePop}>
+                  <button className="bg-black hover:bg-stone-700 py-1 px-2 rounded text-white text-[14px]" onClick={handlePop}>
                     <span className="text-xl font-semibold">+</span> ADD USER
                   </button>
                 </th>

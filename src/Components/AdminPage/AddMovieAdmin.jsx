@@ -36,7 +36,7 @@ export default function AddMovieAdmin() {
         <NavBar UserName={Admin.userName} />
         <section className="w-full flex justify-center items-center">
           <table className="mt-9 w-[90%] rounded-md">
-            <thead className="bg-black text-white h-[50px] rounded-md">
+            <thead className="bg-[#1a1a1a] text-white h-[50px] rounded-md">
               <tr className="">
                 <th className="">MOVIE NAME</th>
                 <th className="">DATE</th>
@@ -44,7 +44,7 @@ export default function AddMovieAdmin() {
                 <th className="">
                   <button
                     onClick={handleAddMoviePop}
-                    className="bg-stone-900  hover:bg-stone-800 py-1 px-2 rounded text-white text-[14px]"
+                    className="bg-black  hover:bg-stone-700 py-1 px-2 rounded text-white text-[14px]"
                   >
                     <span className="text-xl font-semibold">+</span> ADD MOVIE
                   </button>
