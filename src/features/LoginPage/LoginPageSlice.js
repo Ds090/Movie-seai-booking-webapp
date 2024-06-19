@@ -61,6 +61,7 @@ export const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
+    
     addUserData: (state, action) => {
       console.log(action);
       const userName = action.payload.userName;

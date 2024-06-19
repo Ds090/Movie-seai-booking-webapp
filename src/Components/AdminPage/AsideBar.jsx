@@ -1,8 +1,8 @@
 import { RiAdminFill } from "react-icons/ri";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 
 export default function Asidebar() {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const {id} = useParams();
     return (
         <aside className=" w-[20%] flex flex-col gap-5 rounded-md m-[2px] bg-[#1a1a1a] ">
@@ -13,20 +13,19 @@ export default function Asidebar() {
           </Link>
         </div>
         <div className="hover:bg-stone-900 flex justify-center rounded m-2">
-          <button
-            className={`py-1 px-2 ${location.pathname ===  `/adminpage/${id}/addmovieadmin` ? 'bg-black' : 'bg-[#1a1a1a]'} text-slate-200 font-bold w-full rounded`}
-            onClick={() => navigate(`/adminpage/${id}/addmovieadmin`)}
+          <NavLink to={`/adminpage/${id}/addmovieadmin`}
+            className={({isActive}) =>  `py-1 px-2 ${ isActive ? 'bg-black' : 'bg-[#1a1a1a]'} text-slate-200 font-bold w-full rounded text-center`}
           >
             MOVIE
-          </button>
+          </NavLink>
         </div>
         <div className="hover:bg-stone-900 flex justify-center rounded m-2">
-          <button
-            className={`py-1 px-2 ${location.pathname ===  `/adminpage/${id}/adduseradmin` ? 'bg-black' : 'bg-[#1a1a1a]'} text-slate-200 font-bold w-full rounded`}
-            onClick={() => navigate(`/adminpage/${id}/adduseradmin`)}
+          <NavLink to={`/adminpage/${id}/adduseradmin`}
+            className={({ isActive }) => `py-1 px-2 ${isActive ? 'bg-black' : 'bg-[#1a1a1a]'} text-slate-200 font-bold w-full rounded text-center`}
+            
           >
             USER
-          </button>
+          </NavLink>
         </div>
       </aside>
     )

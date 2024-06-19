@@ -8,7 +8,7 @@ export default function AddUser({cleanpop}){
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const userData = useSelector((state) => state.user)
+  const userData = useSelector((state) => state.user.user);
 
    function AddMovieHandler() {
     const getDataFind = userData.find((e) => e.userName === userName);

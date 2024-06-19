@@ -27,6 +27,7 @@ function LoginPage() {
   
   function navigation() {
     setIsloading((isLoading) => !isLoading);
+    
     dispatch(navigationPage({
       user_Name: user_Name,
       setuser_Name: setuser_Name,
