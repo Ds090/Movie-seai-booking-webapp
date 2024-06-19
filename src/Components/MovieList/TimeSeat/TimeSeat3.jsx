@@ -13,13 +13,18 @@ export default function TimeSeat3() {
   let navigate = useNavigate();
 
   function SaveData() {
-    let seatCategory ={
+    let seatCategory = {
       Sliver: "Sliver",
       Gold: "Gold",
-      Platinum: "Platinum"
-  }
-    dispatch(saveDataTimeSlice3(seatCategory));
-    navigate(`/userpage/${id}/${name}/${movieid}/${moviename}/seatbooked`);
+      Platinum: "Platinum",
+    };
+
+    if (TotalAmount === 0) {
+      alert("Please Select The Seat!");
+    } else {
+      dispatch(saveDataTimeSlice3(seatCategory));
+      navigate(`/userpage/${id}/${name}/${movieid}/${moviename}/seatbooked`);
+    }
   }
 
   return (

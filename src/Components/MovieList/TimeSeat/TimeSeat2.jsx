@@ -18,8 +18,12 @@ export default function TimeSeat2() {
       Gold: "Gold",
       Platinum: "Platinum"
   }
+  if (TotalAmount === 0) {
+    alert('Please Select The Seat!')
+}else{
     dispatch(saveDataTimeSlice2(seatCategory));
     navigate(`/userpage/${id}/${name}/${movieid}/${moviename}/seatbooked`);
+}
   }
 
   return (

@@ -14,9 +14,12 @@ function CustomRoutes() {
     return(
         <Routes>
             <Route path="/" element={<LoginPage/>}/>
+            {/* This is User Page Routes */}
             <Route path="/userpage/:id/:name" element={<UserPage/>}/>
             <Route path="/userpage/:id/:name/:movieid/:moviename" element={<ShowSeats/>} />
             <Route path="/userpage/:id/:name/:id/:moviename/seatbooked" element={<ConfirmSeat/>} />
+
+            {/* This is Admin Page Routes */}
             <Route path="/adminpage/:id" element={<AdminPage/>}/> 
             <Route path="/adminpage/:id/adduseradmin" element={<AddUserAdmin/>} />
             <Route path="/adminpage/:id/addmovieadmin" element={<AddMovieAdmin />} />
