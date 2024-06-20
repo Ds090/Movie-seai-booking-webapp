@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { GrClose } from "react-icons/gr";
-import { MdMovie } from "react-icons/md";
+import { MdMovie, MdOutlineCancel } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { editMovie } from "../features/LoginPage/MovieSlice";
@@ -18,6 +18,8 @@ export default function EditMovie() {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const fileInputRef = useRef();
+
 
   useEffect(() => {
     if (existingMovie) {
@@ -57,6 +59,15 @@ export default function EditMovie() {
     }
   }
 
+  function handleChangedImageUrl(e) {
+    setMovieImg(URL.createObjectURL(e.target.files[0]));
+  }
+
+  function handleDeleteMovieImg() {
+    setMovieImg("");
+    fileInputRef.current.value = "";
+  }
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center addAnimation">
       <form className="lg:w-[450px] lg:h-[300px] flex flex-col justify-center items-center p-3 bg-[#000] gap-2 rounded-xl m-8 w-[300px] border">
@@ -73,13 +84,23 @@ export default function EditMovie() {
           onChange={(e) => setMovieName(e.target.value)}
           value={MovieNme}
         />
-        <input
-          type="text"
-          placeholder="MOVIE IMAGE URL"
-          className="focus:outline-none lg:w-[400px] w-[270px] py-1 px-1 font-semibold text-[16px] rounded bg-stone-900 text-white border-b-2 border-b-stone-600 focus:border-b-white"
-          onChange={(e) => setMovieImg(e.target.value)}
-          value={MovieImg}
-        />
+      <div className="flex flex-col w-full items-center ">
+          <input
+            type="file"
+            placeholder="MOVIE IMAGE URL"
+            className="focus:outline-none lg:w-[400px] w-[270px] py-1 px-1 font-semibold text-[16px] rounded bg-stone-900 text-white border-b-2 border-b-stone-600 focus:border-b-white"
+            onChange={(e) => handleChangedImageUrl(e)}
+            accept="image/*"
+            id="files"
+            multiple
+            ref={fileInputRef}
+          />
+          
+          <div className="">
+           {MovieImg.trim() === "" ? "" : <MdOutlineCancel className="text-red-600 text-2xl mb-[2px] cursor-pointer mt-1" onClick={handleDeleteMovieImg}/>}
+            <img src={MovieImg} className="w-[150px]" />
+          </div>
+        </div>
 
         <input
           type="date"

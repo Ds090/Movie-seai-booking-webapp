@@ -82,6 +82,7 @@ export default function AddMovie({ cleanpop }) {
             multiple
             ref={fileInputRef}
           />
+          
           <div className="">
            {MovieImg.trim() === "" ? "" : <MdOutlineCancel className="text-red-600 text-2xl mb-[2px] cursor-pointer mt-1" onClick={handleDeleteMovieImg}/>}
             <img src={MovieImg} className="w-[150px]" />

@@ -9,9 +9,10 @@ export default function MovieList() {
             <h1 className="text-3xl mb-4 font-bold font-sans ">RECOMMENDED MOVIES</h1>
             <div className="w-full flex flex-wrap justify-center gap-10">
                 {movieData.map((movieList) => {
+                    console.log(movieList.movieImg);
                     return (
                         <div key={movieList.id} className="w-[250px] border rounded bg-[#020202] p-2 space-y-1">
-                            <img src={movieList.movieImg} alt="" className="rounded" id="image"/>
+                            <img src={movieList.movieImg} alt="" className="rounded" />
                             <h1 className="text-white text-xl">{movieList.movieName}</h1>
                             <p className="text-gray-300">{movieList.movieDate}</p>
                            <Link to={`/userpage/${id}/${name}/${movieList.id}/${movieList.movieName}`}>

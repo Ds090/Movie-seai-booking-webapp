@@ -24,6 +24,7 @@ function StoreData(state) {
     console.log(err);
   }
 }
+
 const initialState = loadStateData() || {
   user: getUserData,
   Sliver: {
@@ -83,6 +84,7 @@ export const userSlice = createSlice({
       const navigate = action.payload.navigate;
       const setuser_Name = action.payload.setuser_Name;
       const setuser_Password = action.payload.setuser_Password;
+      
       if (user_Name.trim() !== "" && userpassword.trim() !== "") {
         loadingId.current = setInterval(() => {
           setIsloading((isLoading) => !isLoading);
