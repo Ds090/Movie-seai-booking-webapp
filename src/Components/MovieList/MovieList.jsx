@@ -11,7 +11,7 @@ export default function MovieList() {
                 {movieData.map((movieList) => {
                     return (
                         <div key={movieList.id} className="w-[250px] border rounded bg-[#020202] p-2 space-y-1">
-                            <img src={movieList.movieImg} alt="" className="rounded"/>
+                            <img src={movieList.movieImg} alt="" className="rounded" id="image"/>
                             <h1 className="text-white text-xl">{movieList.movieName}</h1>
                             <p className="text-gray-300">{movieList.movieDate}</p>
                            <Link to={`/userpage/${id}/${name}/${movieList.id}/${movieList.movieName}`}>
