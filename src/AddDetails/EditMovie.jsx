@@ -70,7 +70,7 @@ export default function EditMovie() {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center addAnimation">
-      <form className="lg:w-[450px] lg:h-[300px] flex flex-col justify-center items-center p-3 bg-[#000] gap-2 rounded-xl m-8 w-[300px] border">
+      <form className="lg:w-[450px] lg:h-[500px] flex flex-col justify-center items-center p-3 bg-[#000] gap-2 rounded-xl m-8 w-[300px] border">
         <div className="w-full flex justify-between h-[20px] mr-6">
           <MdMovie className="sm:ml-4 lg:ml-6 text-2xl text-white" />
           <button type="reset" onClick={() => navigate(`/adminpage/${id}/addmovieadmin`)}>

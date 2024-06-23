@@ -17,6 +17,7 @@ export default function TimeSeat3() {
       Sliver: "Sliver",
       Gold: "Gold",
       Platinum: "Platinum",
+      id: id
     };
 
     if (TotalAmount === 0) {

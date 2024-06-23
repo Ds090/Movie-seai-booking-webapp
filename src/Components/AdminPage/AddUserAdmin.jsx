@@ -1,6 +1,6 @@
 import Asidebar from "./AsideBar";
 import { useState } from "react";
-import AddUser from "../../AddMovie/AddUser";
+import AddUser from "../../AddDetails/AddUser";
 import { useDispatch, useSelector } from "react-redux";
 import { removeUser } from "../../features/LoginPage/LoginPageSlice";
 import { Admin } from "../../Admin/CustomAdmin";
@@ -25,7 +25,8 @@ export default function AddUserAdmin() {
             <thead className="bg-[#1a1a1a] text-white h-[50px]">
               <tr className="">
                 <th className="">USER NAME</th>
-                <th className="">PASSWORD</th>
+                <th className="">TOTAL SEAT</th>
+                <th className="">TOTAL PAY AMOUNT</th>
                 {/* <th className="border border-[#dddddd]">TIME</th> */}
                 <th className="">
                   <button className="bg-black hover:bg-stone-700 py-1 px-2 rounded text-white text-[14px]" onClick={handlePop}>

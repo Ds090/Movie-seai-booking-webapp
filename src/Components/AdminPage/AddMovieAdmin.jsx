@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
-import AddMovie from "../../AddMovie/AddMovie";
+import AddMovie from "../../AddDetails/AddMovie";
 import { useDispatch, useSelector } from "react-redux";
 import Asidebar from "./AsideBar";
 import { Admin } from "../../Admin/CustomAdmin";
 import NavBar from "../NavBar/NavBar";
 import { editMovie, removeMovie } from "../../features/LoginPage/MovieSlice";
-import EditMovie from "../../AddMovie/EditMovie";
+import EditMovie from "../../AddDetails/EditMovie";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function AddMovieAdmin() {

@@ -1,15 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { saveData } from "../../../features/LoginPage/LoginPageSlice";
 import SeatTimeSlice1 from "../Seats/SeatTimeSlice1.jsx";
+import { saveDataTimeSlice1 } from "../../../features/TimeSlice1.js";
 
 
 export default function TimeSeat1() {
   const { id, moviename, name, movieid } = useParams();
-  let addSilver = useSelector((state) => state.user.Sliver);
-  let addGold = useSelector((state) => state.user.Gold);
-  let addPlatinum = useSelector((state) => state.user.Platinum);
-  let TotalAmount = useSelector((state) => state.user.totalAmount);
+  let addSilver = useSelector((state) => state.TimeSlice1.Sliver);
+  let addGold = useSelector((state) => state.TimeSlice1.Gold);
+  let addPlatinum = useSelector((state) => state.TimeSlice1.Platinum);
+  let TotalAmount = useSelector((state) => state.TimeSlice1.totalAmount);
   let dispatch = useDispatch();
   let navigate = useNavigate();
 
@@ -17,12 +17,13 @@ export default function TimeSeat1() {
     let seatCategory ={
         Sliver: "Sliver",
         Gold: "Gold",
-        Platinum: "Platinum"
+        Platinum: "Platinum",
+        id: id,
     }
     if (TotalAmount === 0) {
         alert('Please Select The Seat!')
     }else{
-        dispatch(saveData(seatCategory));
+        dispatch(saveDataTimeSlice1(seatCategory));
         navigate(`/userpage/${id}/${name}/${movieid}/${moviename}/seatbooked`);
     }
   }

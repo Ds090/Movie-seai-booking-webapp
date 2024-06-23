@@ -32,9 +32,9 @@ export default function ShowSeats() {
   }, [Time])
   
   return (
-    <section>
+    <section className="bg-[#080808] w-full min-h-screen text-white">
       <NavBar UserName={name} />
-      <main className="w-full flex justify-center flex-col items-center">
+      <main className="w-full  flex justify-center flex-col items-center">
         {movieList.map((list) => {
           if (list.movieName == moviename) {
             return (

@@ -8,7 +8,7 @@ export default function NavBar({ UserName }) {
       className={`w-full h-[60px] flex justify-between items-center px-3 ${
         location.pathname === "/"
           ? "border-none"
-          : "border-b drop-shadow-md shadow-md"
+          : ""
       }`}
     >
       <img
@@ -17,8 +17,8 @@ export default function NavBar({ UserName }) {
         className="w-[80px] h-[40px] rounded-md border-black border"
       />
       <div className="flex items-center gap-2">
-        <h1 className="text-xl font-semibold text-black fons">{UserName}</h1>
-        {location.pathname === '/' ? "" : <NavLink to=".." className="border py-1 px-4 rounded font-semibold hover:bg-stone-300" >LOGOUT</NavLink>}
+        <h1 className="text-xl font-semibold text-white fons">{UserName}</h1>
+        {location.pathname === '/' ? "" : <NavLink to=".." className=" py-1 px-4 rounded font-semibold hover:bg-stone-800 bg-stone-900 text-white" >LOGOUT</NavLink>}
       </div>
     </nav>
   );

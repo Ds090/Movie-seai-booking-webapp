@@ -5,7 +5,7 @@ import MovieList from "./MovieList";
 function UserPage() {
     const {name} = useParams();
     return(
-        <div className="flex flex-col h-auto w-full font-serif ">   
+        <div className="flex flex-col h-screen w-full font-serif bg-[#080808]">   
          <NavBar UserName={name}/>
          <MovieList/>
         </div>

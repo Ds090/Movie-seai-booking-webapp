@@ -8,7 +8,7 @@ import AddUserAdmin from "../Components/AdminPage/AddUserAdmin";
 import AddMovieAdmin from "../Components/AdminPage/AddMovieAdmin";
 import ShowSeats from "../Components/MovieList/ShowSeats";
 import ConfirmSeat from "../Components/ConfirmSeat/ConfirmSeat";
-import EditMovie from "../AddMovie/EditMovie";
+import EditMovie from "../AddDetails/EditMovie";
 
 function CustomRoutes() {
     return(

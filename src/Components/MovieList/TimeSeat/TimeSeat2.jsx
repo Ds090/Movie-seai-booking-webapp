@@ -16,7 +16,8 @@ export default function TimeSeat2() {
     let seatCategory ={
       Sliver: "Sliver",
       Gold: "Gold",
-      Platinum: "Platinum"
+      Platinum: "Platinum",
+      id: id
   }
   if (TotalAmount === 0) {
     alert('Please Select The Seat!')

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { useDispatch} from "react-redux";
-import { addSeat} from "../../../features/LoginPage/LoginPageSlice";
+import { addSeatTimeSlice1 } from "../../../features/TimeSlice1";
 
 // eslint-disable-next-line no-unused-vars
 export default function SeatTimeSlice1({category, amount, seat}) {
@@ -13,7 +13,7 @@ export default function SeatTimeSlice1({category, amount, seat}) {
         id: id,
         category: category
     }
-    dispatch(addSeat(data));
+    dispatch(addSeatTimeSlice1(data));
   }
 
   return (
